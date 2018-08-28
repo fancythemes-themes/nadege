@@ -16,11 +16,11 @@ get_header(); ?>
 
 			<article class="error-404 not-found">
 				<header class="page-header-not-found">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'nadege' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'nadege' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'nadege' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'nadege' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->

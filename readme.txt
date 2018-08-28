@@ -1,11 +1,14 @@
 === Nadege ===
 Contributors: FancyThemes
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.8
-Version: 1.2
+Tested up to: WordPress 4.9
+Version: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, green, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags:white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+Nadege WordPress Theme, Copyright 2018 FancyThemes
+Nadege is distributed under the terms of the GNU GPL
 
 == Description ==
 Nadege Theme Documentation.
@@ -20,13 +23,13 @@ Nadege Theme Documentation.
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Karen in the search form and press the 'Enter' key on your keyboard.
+2. Type in Nadege in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Inital Release
 
 == Copyright ==
@@ -51,7 +54,8 @@ GNU General Public License for more details.
 * Flexslider, (c) 2015 WooThemes, GNU GPL, Version 2 (or later), https://github.com/woothemes/FlexSlider/
 * FitVids, (c) by Chris Coyier and Paravel, https://github.com/davatron5000/FitVids.js/
 * Svgxuse, (c) 2015 by Keyamoon, MIT, https://github.com/Keyamoon/svgxuse/
-* Photographs used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/page/3
-* Photographs used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/
-* Roboto, by ---, Apache License 2.0, Hosted at Google Fonts
-* Source Serif Pro by --, Open Font License, Hosted at: Google Fonts
+* Red berries photograph used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-eight
+* Old car photograph used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-nine
+* Apartment building photograph used on Screenshot, (c) by Nic, CC0, http://littlevisuals.co/tagged/week-thirteen
+* Roboto, by Christian Robertson, Apache License 2.0, Hosted at Google Fonts
+* Source Serif Pro by Frank Grießhammer, Open Font License, Hosted at: Google Fonts

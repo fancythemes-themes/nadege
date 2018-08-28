@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				if ( 1 === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One comment', 'comments title', 'nadege' ) );
+					printf( esc_html_x( 'One comment', 'comments title', 'nadege' ) );
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
@@ -66,7 +66,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'nadege' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'nadege' ); ?></p>
 	<?php endif; ?>
 
 	<?php

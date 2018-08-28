@@ -12,11 +12,16 @@
 
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-			<span class="sticky-post"><?php _e( 'Featured', 'nadege' ); ?></span>
+			<span class="sticky-post"><?php esc_html_e( 'Featured', 'nadege' ); ?></span>
 		<?php endif; ?>
 
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php 
+			the_title( 
+				/* translators: %s: permalink url */
+				sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>'
+			);
+		?>
 
 		<div class="entry-meta">
 			<?php nadege_entry_meta(); ?>
@@ -30,9 +35,12 @@
 
 	<div class="entry-content">
 		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				wp_kses( __( '%1$s<span class="screen-reader-text"> "%2$s"</span>', 'nadege' ), nadege_only_allow_span() ) ,
+			the_content( sprintf( 
+				wp_kses( 
+				/* translators: %s: Name of current post */
+					__( '%1$s<span class="screen-reader-text"> "%2$s"</span>', 'nadege' ),
+					nadege_only_allow_span() 
+				) ,
 				esc_html__('Continue reading', 'nadege'),
 				get_the_title()
 			) );

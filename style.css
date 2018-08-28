@@ -1,10 +1,10 @@
 /*
 Theme Name: Nadege
-Theme URI: https://fancythemes.com/nadege/
+Theme URI: https://fancythemes.com/themes/nadege/
 Author: FancyThemes
 Author URI: https://fancythemes.com/
-Description: Nadege is a clean WordPress theme for blogging, it can be for personal, travel, food or any other blog. Designed by focusing on readability. Developed following modern web technology and trends and follow the Web Standard, such as CSS flexbox, SVG for icons and graphics.
-Version: 1.0
+Description: Nadege is a clean WordPress theme for blogging. Designed by focusing on readability. Developed following modern web technology.
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
@@ -792,9 +792,7 @@ a:active {
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	flex: 0 1 100%;
-	padding: 20px 0;
 	margin-top: 10px;
-	border-top: 1px solid #dddddd;
 }
 
 .site-header-menu.toggled-on {
@@ -907,6 +905,10 @@ a:active {
 
 .site-footer .social-navigation {
 	margin-bottom: 21px;
+}
+
+.site-header .social-navigation {
+	display: none;
 }
 
 .social-navigation ul {
@@ -1781,7 +1783,7 @@ blockquote:after,
  */
 
 .site-header {
-	margin: 0 0 40px;
+	margin: 0;
 	padding: 10px 0 0;
 	position: relative;
 	border-bottom: 1px solid #dddddd;
@@ -1874,7 +1876,8 @@ blockquote:after,
 }
 
 .menu-toggle {
-	left: 30px;
+	right: 30px;
+	top: -7px;
 }
 
 .search-toggle {
@@ -1951,11 +1954,14 @@ blockquote:after,
 	background-color: rgba( 0, 0, 0, 0.04 );
 	z-index: 10;
 	position: relative;
+    margin-bottom: 20px;
+    margin-top: 10px;
+	flex: 1 0 100%;
+	order: 10;
 }
 
 .site-search .search-form {
 	width: 100%;
-	display: none;
 }
 
 .site-search .search-toggle.toggled + .search-form {
@@ -1974,7 +1980,6 @@ blockquote:after,
 /* featured widget area */
 .header-widget {
 	margin: 0 20px; 
-	width: 100%;
 }
 
 
@@ -1990,12 +1995,12 @@ blockquote:after,
 	border-top: 1px solid #dddddd;
 }
 
-.header-widget .widget .widget-title {
+/*.header-widget .widget .widget-title {
 	font-size: 30px;
 	font-size: 1.875;
 	line-height: 1.333333;
 	margin-top: -7px;
-}
+}*/
 
 /**
  * 11.2 - Posts and pages
@@ -3449,10 +3454,10 @@ p > video {
 	}
 
 	.site-title {
-		font-size: 49px;
-		font-size: 3.065rem;
-		line-height: 1.204082;
-	}
+		font-size: 57px;
+		font-size: 3.5625rem;
+		line-height: 1.175;
+    }
 
 	.wp-custom-logo .site-title {
 		margin-top: 30px;
@@ -3828,6 +3833,8 @@ p > video {
 		margin-top: 20px;
 		border-bottom: none;
 		position: relative;
+		padding: 20px 0;
+		border-top: 1px solid #dddddd;
 	}
 
 
@@ -3952,8 +3959,15 @@ p > video {
 		display: none;
 	}
 
+	.site-header .social-navigation {
+		display: block;
+	}
+
 	.site-search {
-		order: 0;
+		order: initial;
+		flex: 0 0 auto;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	.site-header .search-form {
@@ -4159,6 +4173,10 @@ p > video {
 	.site-featured-posts .featured-big-post {
 		margin-bottom: 28px;		
 	}
+
+	.header-widget {
+		width: 100%;
+	}
 	
 	.entry-header,
 	.post-thumbnail,
@@ -4206,7 +4224,7 @@ p > video {
 	}
 	
 	.site-footer .social-navigation {
-		margin: 0 40px 28px;
+		margin: 0 auto 28px;
 		-webkit-order: 2;
 		-ms-flex-order: 2;
 		order: 2;
@@ -4357,10 +4375,33 @@ p > video {
 }
 
 
-/**
- * 14.7 - >= 1340px
- */
-@media screen and (min-width: 83.75em) {
+@media screen and (max-width: 30em) {
+	.site-header-main {
+		padding: 0 20px;
+	}
+
+	.site-content {
+		padding: 0;
+	}
+
+	.widget {
+		padding: 20px;
+		margin: 0 0 20px;
+	}
+
+	.header-widget .widget {
+		padding: 20px 0;
+	}
+
+	.content-area, .sidebar {
+		padding: 20px;
+	}
+
+	.site-main > article {
+		margin: 0 0 20px;
+		padding: 0 0 20px;
+	}
+
 }
 
 

@@ -753,7 +753,7 @@ if ( ! function_exists( 'nadege_background_style' ) ) :
  *
  * Create your own nadege_background_style() function to override in a child theme.
  *
- * @since Karen 0.1.0
+ * @since Nadege 0.1.0
  *
  * @see nadege_custom_header_and_background().
  */

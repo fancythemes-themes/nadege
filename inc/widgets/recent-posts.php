@@ -190,11 +190,11 @@ class Nadege_Widget_Recent_Posts extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id( 'sort' ); ?>"><?php esc_html_e( 'Sort By:', 'nadege' ); ?></label>
 			<select id="<?php echo $this->get_field_id( 'sort' ); ?>" name="<?php echo $this->get_field_name( 'sort' ); ?>" >
 				<option value="date" <?php selected( $sort, 'date' ); ?> > <?php esc_html_e('Date', 'nadege'); ?> </option>
-				<option value="comment_count" <?php selected( $sort, 'comment_count' ); ?> > <?php _e('Comments Number', 'nadege'); ?> </option>
+				<option value="comment_count" <?php selected( $sort, 'comment_count' ); ?> > <?php esc_html_e('Comments Number', 'nadege'); ?> </option>
 			</select>
 		</p>
 		<p>
-			<span><?php _e('Presented as', 'nadege'); ?></span><br>
+			<span><?php esc_html_e('Presented as', 'nadege'); ?></span><br>
 			<input type="radio" id="<?php echo $this->get_field_id( 'presentation' ) . '-1'; ?>" name="<?php echo $this->get_field_name( 'presentation' ); ?>" value="thumbnail" <?php checked( $presentation, 'thumbnail'); ?> />
 			<label for="<?php echo $this->get_field_id( 'presentation' ) . '-1'; ?>"><?php esc_html_e( 'Large Thumbnail', 'nadege'); ?></label><br>
 			

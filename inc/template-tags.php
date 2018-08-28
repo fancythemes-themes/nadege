@@ -43,7 +43,12 @@ function nadege_entry_meta() {
 
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( sprintf( wp_kses( __( 'No comment<span class="screen-reader-text"> on %s</span>', 'nadege' ), nadege_only_allow_span() ), get_the_title() ) );
+		comments_popup_link(
+			sprintf(
+				/* translators: %s: Name of current post */
+				wp_kses( __( 'No comment<span class="screen-reader-text"> on %s</span>', 'nadege' ), nadege_only_allow_span() ),
+				get_the_title() )
+			);
 		echo '</span>';
 	}
 
@@ -359,6 +364,7 @@ function nadege_archive_title() {
 			$title = esc_html_x( 'Chats', 'post format archive title', 'nadege' );
 		}
 	} elseif ( is_post_type_archive() ) {
+		/* translators: %s: archive name */
 		$title = sprintf( __( 'Archives: %s' , 'nadege'), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
@@ -422,43 +428,6 @@ function nadege_breadcrumbs() {
 }
 
 /**
- * Pagination for custom query.
- *
- * @since Nadege 1.0
- *
- * @param WP_Query $query, the custom query
- * @param Array @args, the same arguments as the_posts_pagination() function 
- * @return string HTML Markup for.
- */
-function nadege_custom_query_pagination( $query, $args = array()) {
-	$navigation = '';
-
-	// Don't print empty markup if there's only one page.
-	if ( $query->max_num_pages > 1 ) {
-		$args = wp_parse_args( $args, array(
-				'mid_size'		   => 1,
-				'prev_text'		  => esc_html__( 'Previous', 'nadege' ),
-				'next_text'		  => esc_html__( 'Next', 'nadege' ),
-				'screen_reader_text' => esc_html__( 'Posts navigation', 'nadege' ),
-		) );
-
-		// Make sure we get a string back. Plain is the next best thing.
-		if ( isset( $args['type'] ) && 'array' == $args['type'] ) {
-				$args['type'] = 'plain';
-		}
-
-		// Set up paginated links.
-		$links = paginate_links( $args );
-
-		if ( $links ) {
-				$navigation = _navigation_markup( $links, 'pagination', $args['screen_reader_text'] );
-		}
-	}
-
-	return $navigation;
-}
-
-/**
  * Render the footer credit, print from the footer_credit options, or default.
  *
  * @since Nadege 1.0
@@ -472,11 +441,11 @@ function nadege_footer_credit( $echo = false ) {
 	}else{ 
 
 		$footer_credit = nadege_sanitize_footer_credit(
-			sprintf(
-				_x('%1$s Powered by %2$s and designed by %3$s.', '%1$s for homepage link, %2$s for wordpress.org link, %3$s for theme designer link', 'nadege'),
+			/* translators: %1$s: Site name, %2$s: Wordpress link, %3$s: theme designer link  */
+			sprintf( _x('%1$s Powered by %2$s and designed by %3$s.', '%1$s for homepage link, %2$s for wordpress.org link, %3$s for theme designer link', 'nadege'),
 				'<a href="' . esc_url( home_url('/') ) .'" rel="home">' . get_bloginfo('name') . '</a>',
 				'<a href="' . esc_url( __('https://wordpress.org/', 'nadege' ) ) .'" rel="home">' . esc_html__('WordPress', 'nadege') . '</a>',
-				'<a href="' . esc_url( __('https://fancythemes.com/', 'nadege') ) .'">' . esc_html__('FancyThemes', 'nadege') . '</a>'
+				'<a href="' . esc_url( __('https://fancythemes.com/', 'nadege') ) .'" rel="dofollow">' . esc_html__('FancyThemes', 'nadege') . '</a>'
 			)
 		);
 	}

@@ -16,7 +16,7 @@
 
 			<?php get_sidebar('footer'); ?>
 
-			<?php if ( has_nav_menu( 'social' ) && false ) : ?>
+			<?php if ( has_nav_menu( 'social' ) ) : ?>
 				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'nadege' ); ?>">
 					<?php
 						add_filter( 'walker_nav_menu_start_el', 'nadege_social_menu_item_output', 10, 4 );

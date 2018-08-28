@@ -415,19 +415,6 @@ require get_template_directory() . '/inc/sanitize-callbacks.php';
  */
 require get_template_directory() . '/inc/widgets/recent-posts.php';
 
-if ( class_exists( 'StormTwitter' ) ) :
-	/**
-	 * Twitter widget. Only include when the oAuth Twitter Feed for Developer plugin installed
-	 *
-	 */
-	require get_template_directory() . '/inc/widgets/twitter.php';
-endif;
-
-/**
- * Instagram widget.
- *
- */
-require get_template_directory() . '/inc/widgets/instagram.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
